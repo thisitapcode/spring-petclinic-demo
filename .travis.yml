@@ -1,0 +1,18 @@
+# Báo nó dùng Java
+language: java
+
+# Báo nó mượn máy ảo Ubuntu 20.04 (bắt buộc)
+dist: focal
+
+# "CHÌA KHÓA": Báo nó cài Java 25
+jdk:
+  - openjdk25
+
+# Lệnh chạy (y hệt)
+script:
+  - ./mvnw clean package
+
+# Cache (cho lẹ)
+cache:
+  directories:
+    - $HOME/.m2
